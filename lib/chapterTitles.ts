@@ -28,4 +28,5 @@ export const chapterTitles: Record<string, string> = {
     "chapter-2700": "Patent Terms and Extensions",
     "chapter-2800": "Supplemental Examination",
     "chapter-2900": "International Design Applications",
+    "chapter-0": "Test Chapter"
 }

@@ -8,6 +8,7 @@ export default function getChapters() {
         return {
             slug: chapter,
             title: chapterTitles[chapter],
+            number: chapter.replace('chapter-', '')
         }
     })
     return res;

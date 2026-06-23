@@ -14,7 +14,8 @@ export default function getSections(chapterSlug: string) {
             section: data.section,
             description: data.description,
             published: data.published,
-            lastEdited: data.lastEdited
+            lastEdited: data.lastEdited,
+            chapter: data.chapter
         });
     }))    
 }
