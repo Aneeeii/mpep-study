@@ -8,7 +8,8 @@ export async function POST(request: Request): Promise<Response> {
         const cookie = await cookies();
         cookie.set("doggonaut", process.env.AUTH_SECRET!, {
             httpOnly: true,
-            path: "/"
+            path: "/",
+            maxAge: 60 * 60
         });
 
         return new Response(JSON.stringify({message: 'Login success.'}), {
