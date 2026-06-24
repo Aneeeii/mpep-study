@@ -9,7 +9,7 @@ export default function getSections(chapterSlug: string) {
         const fileContents = fs.readFileSync(fp, 'utf8');
         const {data} = matter(fileContents);
         return ({
-            slug: section,
+            slug: section.replace('.md', ''),
             title: data.title,
             section: data.section,
             description: data.description,

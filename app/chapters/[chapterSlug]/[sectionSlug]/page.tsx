@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 export default async function SectionPage({params}: {params: Promise<{chapterSlug: string, sectionSlug: string}>}) {
     const { chapterSlug, sectionSlug } = await params;
     const fp = path.join(process.cwd(), 'content', chapterSlug, sectionSlug);
-    const fileContents = fs.readFileSync(fp, 'utf8');
+    const fileContents = fs.readFileSync(`${fp}.md`, 'utf8');
     const {data, content} = matter(fileContents);
 
     return (
