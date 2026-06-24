@@ -9,7 +9,7 @@ export default async function ChapterPage({params}: {params: Promise<{chapterSlu
         <>
             <h1>Sections</h1>
             {sections.map(section => (
-                <Link key={section.slug} href={`/chapters/${'chapter-' + section.chapter}/${'section-' + section.section + '.md'}`}>Section {section.section}: {section.title}</Link>
+                <Link key={section.slug} href={`/chapters/${'chapter-' + section.chapter}/${'section-' + section.slug}`}>Section {section.section}: {section.title}</Link>
             ))}
         </>
     )
